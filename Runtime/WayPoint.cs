@@ -1,22 +1,24 @@
 using System.Drawing;
 using UnityEngine;
 
-public class WayPoint : MonoBehaviour
-{
-    public PointType pointType;
-
-    public WayPoint(GameObject obj)
+namespace com.floxgames.IdleTycoonSDK {
+    public class WayPoint : MonoBehaviour
     {
-        setPosition(obj.transform.position);
-    }
+        public PointType pointType;
 
-    public void setPosition(Vector3 pos) => transform.position = pos;
+        public WayPoint(GameObject obj)
+        {
+            setPosition(obj.transform.position);
+        }
 
-    // void Awake() => GetComponent<MeshRenderer>().enabled = false;
+        public void setPosition(Vector3 pos) => transform.position = pos;
 
-    void OnDrawGizmos()
-    {
-        // Gizmos.color = Color.green;
-        // Gizmos.DrawSphere(transform.position, .15f);
+        // void Awake() => GetComponent<MeshRenderer>().enabled = false;
+
+        void OnDrawGizmos()
+        {
+            // Gizmos.color = Color.green;
+            // Gizmos.DrawSphere(transform.position, .15f);
+        }
     }
 }

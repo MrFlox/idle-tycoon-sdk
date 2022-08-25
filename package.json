@@ -1,16 +1,15 @@
 {
-    "name": "com.floxgames.idle-tycoon-sdk",
-    "version": "1.0.0",
-    "displayName": "Idle Tycoon SDK",
-    "description": "",
-    "unity": "2021.1",
-    "dependencies": {},
-    "keywords": [
-        "SDK"
-    ],
-    "author": {
-        "name": "Andrew Flox",
-        "email": "anrybio@gmail.com",
-        "url": "http://floxgames.com"
-    }
+  "name": "com.floxgames.idle-tycoon-sdk",
+  "version": "1.0.0",
+  "displayName": "Idle Tycoon SDK",
+  "unity": "2021.1",
+  "dependencies": {},
+  "keywords": [
+    "SDK"
+  ],
+  "author": {
+    "name": "Andrew Flox",
+    "email": "anrybio@gmail.com",
+    "url": "http://floxgames.com"
+  }
 }

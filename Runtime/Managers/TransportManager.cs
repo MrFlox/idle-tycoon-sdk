@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TransportManager : MonoBehaviour
-{
-    public int quantity;
-    public int maxQuantity;
+namespace com.floxgames.IdleTycoonSDK {
+    public class TransportManager : MonoBehaviour
+    {
+        public int quantity;
+        public int maxQuantity;
 
+    }
 }
