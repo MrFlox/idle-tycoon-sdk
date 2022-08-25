@@ -11,5 +11,6 @@
     "name": "Andrew Flox",
     "email": "anrybio@gmail.com",
     "url": "http://floxgames.com"
-  }
+  },
+  "description": "SDK для создания игр в стиле IdleTycoon типа Lamber.INC"
 }
