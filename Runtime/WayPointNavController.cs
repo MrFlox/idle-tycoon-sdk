@@ -22,7 +22,7 @@ namespace com.floxgames.IdleTycoonSDK
         public float speed, rotationSpeed;
         public bool isCanGo = true;
         bool initialized = false;
-        bool useRotation = false;
+        public bool useRotation = false;
 
         void Awake()
         {
@@ -65,7 +65,8 @@ namespace com.floxgames.IdleTycoonSDK
             direction = (currentPoint - transform.position).normalized;
             var curPos = transform.position;
             transform.position = curPos + direction * speed * Time.deltaTime;
-            if (useRotation) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * rotationSpeed);
+            if (useRotation)
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * rotationSpeed);
         }
         public void atTheWayPoint()
         {
