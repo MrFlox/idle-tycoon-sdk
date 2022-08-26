@@ -5,7 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.Events;
-namespace com.floxgames.IdleTycoonSDK {
+namespace com.floxgames.IdleTycoonSDK
+{
     public class ResourceZone : MonoBehaviour
     {
         public int resourceValue;
@@ -31,6 +32,7 @@ namespace com.floxgames.IdleTycoonSDK {
 
         private void addResourceVisuals()
         {
+            if (resource == null) return;
             GameObject obj = Instantiate(resource.visualPrefab);
             obj.transform.parent = transform;
             obj.transform.localPosition = Vector3.zero;

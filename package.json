@@ -1,9 +1,8 @@
 {
   "name": "com.floxgames.idle-tycoon-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Idle Tycoon SDK",
   "unity": "2021.1",
-  "dependencies": {},
   "keywords": [
     "SDK"
   ],
@@ -12,5 +11,5 @@
     "email": "anrybio@gmail.com",
     "url": "http://floxgames.com"
   },
-  "description": "SDK для создания игр в стиле IdleTycoon типа Lamber.INC"
+  "description": "SDK \u0434\u043b\u044f \u0441\u043e\u0437\u0434\u0430\u043d\u0438\u044f \u0438\u0433\u0440 \u0432 \u0441\u0442\u0438\u043b\u0435 IdleTycoon \u0442\u0438\u043f\u0430 Lamber.INC"
 }
