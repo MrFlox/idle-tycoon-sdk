@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine.Events;
 
-namespace com.floxgames.IdleTycoonSDK {
+namespace com.floxgames.IdleTycoonSDK
+{
     [SelectionBase]
     public class Machine : MonoBehaviour
     {
@@ -123,8 +126,9 @@ namespace com.floxgames.IdleTycoonSDK {
             Vector3 pos = transform.position + Vector3.up * .8f;
             // pos.x -= transform.GetChild(0).localScale.x / 2;
             pos.x -= 1.5f;
-
+#if UNITY_EDITOR
             Handles.Label(pos, $"{name}: {Mathf.Round(progress * 100)}%");
+#endif
             if (!isActive) return;
             // Gizmos.color = Color.red;
             // Gizmos.DrawSphere(transform.position + Vector3.up * 4.3f, 1.0f);

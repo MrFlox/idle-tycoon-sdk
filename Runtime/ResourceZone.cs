@@ -3,7 +3,9 @@ using System.Reflection.Emit;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine.Events;
 namespace com.floxgames.IdleTycoonSDK
 {
@@ -36,7 +38,6 @@ namespace com.floxgames.IdleTycoonSDK
             GameObject obj = Instantiate(resource.visualPrefab);
             obj.transform.parent = transform;
             obj.transform.localPosition = Vector3.zero;
-
         }
 
 
@@ -50,9 +51,11 @@ namespace com.floxgames.IdleTycoonSDK
         void OnDrawGizmos()
         {
             if (style == null) initStyle();
+#if UNITY_EDITOR
             Handles.Label(transform.position - Vector3.down * .2f, $"{resourceValue}/{maxCapacity}", style);
             if (resource != null)
                 Handles.Label(transform.position + Vector3.down * .2f, $"{resource.resourceName}", style);
+#endif
         }
 
         public int collect(int value = 1)

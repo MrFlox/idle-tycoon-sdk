@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 using System.Linq;
 
@@ -92,7 +94,9 @@ namespace com.floxgames.IdleTycoonSDK
         void OnDrawGizmos()
         {
             //------------------
+#if UNITY_EDITOR
             Handles.Label(transform.position + Vector3.up * .8f, $"{currentLoad}/{capacity}");
+#endif
             //-----------------------------
 
             void drawInZoneConnectors()

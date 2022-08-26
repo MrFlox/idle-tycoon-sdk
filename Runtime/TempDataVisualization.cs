@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
-namespace com.floxgames.IdleTycoonSDK {
+namespace com.floxgames.IdleTycoonSDK
+{
     public class TempDataVisualization : MonoBehaviour
     {
         // [SerializeField] MoneyManager moneyManager;
@@ -18,5 +21,5 @@ namespace com.floxgames.IdleTycoonSDK {
         //     // Handles.Label(transform.position, $"MoneyAmount")
         // }
 
-}
+    }
 }
