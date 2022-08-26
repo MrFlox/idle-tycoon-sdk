@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
-namespace com.floxgames.IdleTycoonSDK {
+namespace com.floxgames.IdleTycoonSDK
+{
     public enum PointType { start = 0, end = 1, parking = 2, move = 3 };
     // public enum TargetType { start, end, parking };
     public class WayPointNavController : MonoBehaviour
@@ -21,6 +22,7 @@ namespace com.floxgames.IdleTycoonSDK {
         public float speed, rotationSpeed;
         public bool isCanGo = true;
         bool initialized = false;
+        bool useRotation = false;
 
         void Awake()
         {
@@ -63,7 +65,7 @@ namespace com.floxgames.IdleTycoonSDK {
             direction = (currentPoint - transform.position).normalized;
             var curPos = transform.position;
             transform.position = curPos + direction * speed * Time.deltaTime;
-            // transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * rotationSpeed);
+            if (useRotation) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * rotationSpeed);
         }
         public void atTheWayPoint()
         {
