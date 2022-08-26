@@ -1,3 +1,5 @@
+
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 using com.floxgames.IdleTycoonSDK;
@@ -25,3 +27,4 @@ namespace com.floxgames.IdleTycoonSDK
         }
     }
 }
+#endif

@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 
@@ -30,3 +31,4 @@ namespace com.floxgames.IdleTycoonSDK
         }
     }
 }
+#endif
