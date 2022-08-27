@@ -2,7 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace com.floxgames.IdleTycoonSDK {
+namespace com.floxgames.IdleTycoonSDK
+{
     public class ResouceGenerator : MonoBehaviour
     {
         public float growthTime = 10.0f;
@@ -49,8 +50,8 @@ namespace com.floxgames.IdleTycoonSDK {
             StartCoroutine(grow());
         }
 
-        void hide() => GetComponent<SpriteRenderer>().enabled = false;
-        void show() => GetComponent<SpriteRenderer>().enabled = true;
+        void hide() => transform.localScale = Vector3.zero;
+        void show() => transform.localScale = initalScale * .5f;
         IEnumerator grow()
         {
             yield return new WaitForSeconds(growthTime);
