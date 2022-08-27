@@ -87,7 +87,7 @@ namespace com.floxgames.IdleTycoonSDK
         private void updateDataFromSettings()
         {
             transport.speed = getCurrentSettings().speed;
-            transport.rotationSpeed = transport.speed;
+            transport.rotationSpeed = transport.speed * 3;
             capacity = getCurrentSettings().capacity;
         }
 
