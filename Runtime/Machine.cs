@@ -32,7 +32,7 @@ namespace com.floxgames.IdleTycoonSDK
 
         public string isEnoughForIncome()
         {
-
+            if (settings == null) return "";
             int nLevel = getNextIncomeUpgradeLevel();
             if (nLevel == -1) return "";
             if (MoneyManager.Instance == null) return "";
@@ -41,6 +41,7 @@ namespace com.floxgames.IdleTycoonSDK
 
         public string isEnoughForSpeed()
         {
+            if (settings == null) return "";
             int nLevel = getNextSpeedUpgradeLevel();
             if (nLevel == -1) return "";
             if (MoneyManager.Instance == null) return "";
@@ -48,6 +49,7 @@ namespace com.floxgames.IdleTycoonSDK
         }
         int getNextIncomeUpgradeLevel()
         {
+            if (settings == null) return -1;
             int nextLevel = incomeLevel + 1;
             if (settings.upgradesIncome.Exists(x => x.level == nextLevel))
                 return nextLevel;
@@ -55,6 +57,7 @@ namespace com.floxgames.IdleTycoonSDK
         }
         int getNextSpeedUpgradeLevel()
         {
+            if (settings == null) return -1;
             int nextLevel = speedLevel + 1;
             if (settings.upgradesSpeed.Exists(x => x.level == nextLevel))
                 return nextLevel;
@@ -63,6 +66,7 @@ namespace com.floxgames.IdleTycoonSDK
 
         public float getPriceToIncomeProcess()
         {
+            if (settings == null) return -1;
             int nextLevel = getNextIncomeUpgradeLevel();
             if (nextLevel == -1) return -1;
             return settings.upgradesIncome[nextLevel].price;
@@ -70,6 +74,7 @@ namespace com.floxgames.IdleTycoonSDK
 
         public float getPriceToProcessUpgrade()
         {
+            if (settings == null) return -1;
             int nextLevel = getNextSpeedUpgradeLevel();
             if (nextLevel == -1) return -1;
             return settings.upgradesSpeed[nextLevel].price;

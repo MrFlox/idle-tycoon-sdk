@@ -34,7 +34,7 @@ namespace com.floxgames.IdleTycoonSDK
 
         private void addResourceVisuals()
         {
-            if (resource == null) return;
+            if (resource == null || resource.visualPrefab == null) return;
             GameObject obj = Instantiate(resource.visualPrefab);
             obj.transform.parent = transform;
             obj.transform.localPosition = Vector3.zero;

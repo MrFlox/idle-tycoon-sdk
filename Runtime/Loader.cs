@@ -160,8 +160,8 @@ namespace com.floxgames.IdleTycoonSDK
 
         bool readyToUnload()
         {
-            int maxFreeSpace = outZones.Max(x => x.freeSpace());
-            ResourceZone item = outZones.First(x => x.freeSpace() == maxFreeSpace);
+            int value = outZones.Max(x => x.freeSpace());
+            ResourceZone item = outZones.First(x => x.freeSpace() == value);
             outZone = item;
             return outZone.isStorageSpace();
         }
@@ -169,8 +169,8 @@ namespace com.floxgames.IdleTycoonSDK
         bool readyToLoad()
         {
             //выбираем зону, где больше ресурсов 
-            int minFreeSpace = inZones.Min(x => x.freeSpace());
-            ResourceZone item = inZones.First(x => x.freeSpace() == minFreeSpace);
+            int value = inZones.Min(x => x.freeSpace());
+            ResourceZone item = inZones.First(x => x.freeSpace() == value);
             inZone = item;
             return inZone.readyToCollect() && currentLoad < capacity;
         }
